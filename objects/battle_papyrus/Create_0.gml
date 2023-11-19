@@ -3,6 +3,8 @@ enum PAPYRUS_STATES {
 	DODGE=1
 }
 
+audio_stop_sound(bgm_menu)
+
 depth=DEPTH_BATTLE.ENEMY;
 global.kr = 0
 kr_timer = 0
@@ -20,7 +22,7 @@ scale = 1.5
 dodges = 10
 y = y - 15
 
-turnAttackArray = [battle_turn_pap_1,battle_turn_pap_2, battle_turn_pap_3, battle_turn_pap_4];
+turnAttackArray = [battle_turn_pap_1,battle_turn_pap_2, battle_turn_pap_3, battle_turn_pap_4,battle_turn_pap_5, battle_turn_pap_6, battle_turn_pap_7];
 
 epic_mode = false
 

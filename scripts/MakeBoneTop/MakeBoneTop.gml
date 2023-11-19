@@ -26,5 +26,5 @@ function MakeBoneTop() {
 
 	bone = MakeBoneV(X,battle_board.y-battle_board.up+LENGTH/2+5,LENGTH,HSPEED,0,COLOR,OUT,ROT,DESTROY,TOP,DURATION)
 
-
+	return bone;
 }

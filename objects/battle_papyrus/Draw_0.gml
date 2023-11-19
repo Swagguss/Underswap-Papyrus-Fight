@@ -66,7 +66,7 @@ var head = draw_sprite_ext(papyFaceNorm,
 						  );
 var right_arm_x = x + (11 * uniform_scale_factor);
 var right_arm_y = y * -bod_scale_y * 0.18 + arm_offset - yOffset_leg_scale - (70 * uniform_scale_factor);
-var right_arm = draw_sprite_ext(_state == PAPYRUS_STATES.DODGE ? rightarmshrug : rightarmrest,
+var right_arm = draw_sprite_ext(_state == PAPYRUS_STATES.DODGE ? shrug : rightarmrest,
 								0,
 								right_arm_x,
 								right_arm_y,

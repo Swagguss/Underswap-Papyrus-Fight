@@ -1,10 +1,15 @@
 if(place_meeting(x,y,battle_soul)){
-	var collision=true;
-	if(_type!=0){
-		collision=(floor(battle_soul.x)!=floor(battle_soul.xprevious)||floor(battle_soul.y)!=floor(battle_soul.yprevious));
-		collision=(_type==1 ? collision : !collision);
-	}
-	if(collision){
-		Battle_CallSoulEventBulletCollision();
+	if(_type = 0){
+	        Player_HurtKr();
+	}else if(_type = 1){
+	    if(Input_IsHeld(INPUT.LEFT) || Input_IsHeld(INPUT.UP) || Input_IsHeld(INPUT.DOWN) || Input_IsHeld(INPUT.RIGHT)){
+	        Player_HurtKr();
+	    }
+	}else if(_type = 2){
+	    if(!Input_IsHeld(INPUT.LEFT) && !Input_IsHeld(INPUT.UP) && !Input_IsHeld(INPUT.DOWN) && !Input_IsHeld(INPUT.RIGHT)){
+	        Player_HurtKr();
+	    }
+	}else{
+	    Player_HurtKr();
 	}
 }

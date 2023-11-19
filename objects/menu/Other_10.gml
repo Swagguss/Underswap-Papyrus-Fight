@@ -2,11 +2,13 @@
 if(_menu==0){
 	_mode=file_exists(Flag_GetSavePath(FLAG_TYPE.INFO));
 	if(_mode==0){
-		_inst_instruction=instance_create_depth(170,40,0,text_typer);
-		_inst_instruction.text=_prefix+"{color_text `gray_light`} --- Instruction ---{space_y -1}&&{space_y 2}[Z or ENTER] - Confirm&[X or SHIFT] - Cancel&[C or CTRL] - Menu (In-game)&[F4] - Fullscreen&[Hold ESC] - Quit&When HP is 0, you lose.";
-		_inst_begin=instance_create_depth(170,344,0,text_typer);
-		_inst_begin.text=_prefix+"Begin Game";
-		_inst_settings=instance_create_depth(170,384,0,text_typer);
+		_inst_logo=instance_create_depth(160, 30,0,underswaplogoObj)
+		_inst_begin=instance_create_depth(580,view_hport[0]/2,0,text_typer);
+		audio_play_sound(bgm_menu,0,1);
+		_inst_begin.text=_prefix+"Play";
+		Anim_Create(_inst_begin,"y",ANIM_TWEEN.EXPO, ANIM_EASE.OUT,view_hport[0]/2+100,-300,180)
+		_inst_settings=instance_create_depth(525,view_hport[0]/2+40,0,text_typer);
+		Anim_Create(_inst_settings,"y",ANIM_TWEEN.EXPO, ANIM_EASE.OUT,view_hport[0]/2+140,-300,240)
 		_inst_settings.text=_prefix+"Settings";
 		with(text_typer){
 			event_user(15);
@@ -38,9 +40,6 @@ if(_menu==0){
 		
 	}
 }else{
-	if(instance_exists(_inst_instruction)){
-		instance_destroy(_inst_instruction);
-	}
 	if(instance_exists(_inst_begin)){
 		instance_destroy(_inst_begin);
 	}

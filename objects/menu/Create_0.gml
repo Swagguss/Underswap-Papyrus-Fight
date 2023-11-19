@@ -1,8 +1,10 @@
 _menu=0;
+menu_head = instance_create_depth(x,y,1,pap_menu_head)
+menu_body = instance_create_depth(x,y,1,pap_menu_body)
+menu_legs = instance_create_depth(x,y,1,pap_menu_legs)
 _mode=0;
 
 _prefix="{gui true}{instant true}{shadow true}{font 1}{scale 2}";
-_inst_instruction=noone;
 _inst_begin=noone;
 _inst_settings=noone;
 _inst_name=noone;

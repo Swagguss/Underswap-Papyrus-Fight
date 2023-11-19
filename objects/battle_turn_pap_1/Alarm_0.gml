@@ -10,8 +10,8 @@ for (var i = 0; i < 4; i++) {
     var _gbY = random(480);
     var _dir = point_direction(_gbX, _gbY, _heartPosX, _heartPosY);
     // Calculate the edge position
-    var edgePos = calculateEdgePosition(_dir, centerX, centerY, view_wport[0], view_hport[0]);
-    var _gb = instance_create_depth(edgePos.x, edgePos.y, 0, battle_bullet_gb); //Spawn gaster blaster
+    var edgePos = [_gbX+cos(_dir)*view_wport[0],_gbY+sin(_dir)*view_hport[0]]
+    var _gb = instance_create_depth(edgePos[0], edgePos[1], 0, battle_bullet_gb); //Spawn gaster blaster
     _gb.x_target = _gbX;
     _gb.y_target = _gbY;
     _gb.angle_start = _dir;

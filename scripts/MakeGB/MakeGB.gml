@@ -23,10 +23,9 @@ function MakeGB() {
 	var color = argument[8];
 	var pause = argument[9];
 	var duration = argument[10];
-	var sprite = argument[11];
 	var blend = 1;
-	if(argument_count >= 13){
-		blend = argument[12];
+	if(argument_count >= 11){
+		blend = argument[11];
 	}
 
 	var bb = instance_create_depth(xx,yy,DEPTH_BATTLE.BULLET_OUTSIDE_HIGH,battle_bullet_gb);
@@ -39,7 +38,6 @@ function MakeGB() {
 	bb.type = color;
 	bb.time_release_delay = pause;
 	bb.time_beam_end_delay = duration;
-	bb.sprite_index = sprite;
 	bb.color_blend = blend;
 
 	return bb;

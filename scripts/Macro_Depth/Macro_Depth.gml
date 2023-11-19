@@ -18,6 +18,4 @@ function Macro_Depth() {
 		SOUL=-900,
 		BULLET_OUTSIDE_HIGH=-1000
 	};
-
-
 }
