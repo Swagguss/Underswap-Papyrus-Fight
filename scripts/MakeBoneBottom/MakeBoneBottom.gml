@@ -1,4 +1,4 @@
-///@arg x
+//@arg x
 ///@arg length
 ///@arg hspeed
 ///@arg color

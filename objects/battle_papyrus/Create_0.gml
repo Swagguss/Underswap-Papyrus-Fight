@@ -22,7 +22,7 @@ scale = 1.5
 dodges = 10
 y = y - 15
 
-turnAttackArray = [battle_turn_pap_1,battle_turn_pap_2, battle_turn_pap_3, battle_turn_pap_4,battle_turn_pap_5, battle_turn_pap_6, battle_turn_pap_7];
+turnAttackArray = [battle_turn_pap_8,battle_turn_pap_2, battle_turn_pap_3, battle_turn_pap_4,battle_turn_pap_5, battle_turn_pap_6, battle_turn_pap_7, battle_turn_pap_8];
 
 epic_mode = false
 

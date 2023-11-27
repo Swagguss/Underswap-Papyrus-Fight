@@ -14,8 +14,8 @@ if (_time == 1) {
 	}
 }
 
-for (var i = 0; i < 15; i++) {
-    if (_time == i * 60 + 60) {
+for (var i = 0; i < 35; i++) {
+    if (_time == i * 20 + 60) {
         var _randY, _randX;
         var attempts = 0;
         do {
@@ -35,4 +35,8 @@ for (var i = 0; i < 15; i++) {
         var norm_y = diff_y / magnitude;
         var _flingBone = MakeBoneV(_randX, _randY, 25, norm_x * 2, norm_y * 2, 0, 0, 3, 0, 1);
     }
+}
+if (_time > 60 && battle_soul.y >= battle_board.y+60) {
+	Slam(1)
+	alarm[0] = 60
 }

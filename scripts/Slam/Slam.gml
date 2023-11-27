@@ -1,5 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+///@arg Direction
 function Slam(){
 	Battle_SetSoul(battle_soul_blue)
 	var _dir = argument[0];
